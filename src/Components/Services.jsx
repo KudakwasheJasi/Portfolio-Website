@@ -5,9 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import pic1 from '../assets/IMAGES/lab 1.jpg';
 import pic2 from '../assets/IMAGES/lab 3.jpg';
 import pic3 from '../assets/IMAGES/lab 6.jpg';
-import pic4 from '../assets/IMAGES/lap 2.jpg';
-import pic5 from '../assets/IMAGES/lap 2.jpg';
-import pic6 from '../assets/IMAGES/lap 2.jpg';
+import pic4 from '../assets/IMAGES/blog 10.jpg';
+import pic5 from '../assets/IMAGES/blog 11.jpg';
+import pic6 from '../assets/IMAGES/blog 12.jpg';
 
 // Sample data for services
 const services = [
