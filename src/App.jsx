@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,6 +15,9 @@ import Contact from './Components/Contact'
 import LandingPage from './page/LandingPage';
 import Home2 from './Components/Home2';
 import Home3 from './Components/Home3';
+import About1 from './Components/About1';
+import About2 from './Components/About2';
+import About3 from './Components/About3';
 
 const App = () => {
   return (
@@ -30,6 +34,9 @@ const App = () => {
         <Route path="/home1" element={<Home1 />} />
         <Route path="/home2" element={<Home2 />} />
         <Route path="/home3" element={<Home3 />} />
+        <Route path="/About1" element={<About1 />} />
+        <Route path="/About2" element={<About2 />} />
+        <Route path="/About3" element={<About3 />} />
       </Routes>
     </Router>
   );
