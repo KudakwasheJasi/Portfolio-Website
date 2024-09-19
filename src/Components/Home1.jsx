@@ -2,7 +2,7 @@ import React from 'react';
 import projectImage1 from '../assets/IMAGES/home 5.jpg';
 import projectImage2 from '../assets/IMAGES/home 4.jpg';
 import projectImage3 from '../assets/IMAGES/Home 2.jpg';
-import projectImage4 from '../assets/IMAGES/Home 1.jpg';
+import projectImage4 from '../assets/IMAGES/home 1.jpg';
 import projectImage5 from '../assets/IMAGES/home 3.jpg';
 import projectImage6 from '../assets/IMAGES/home 6.jpg';
 
