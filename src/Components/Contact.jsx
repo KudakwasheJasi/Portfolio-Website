@@ -41,6 +41,21 @@ const Contact = () => {
     <div className="contact-container p-8">
       <h1 className="text-4xl font-bold text-center mb-8">Contact Me</h1>
 
+      {/* Location Note with Link */}
+      <div className="text-center mb-4">
+        <p>
+          Location: 
+          <a 
+            href="https://maps.app.goo.gl/88azNyNEPN476nDc9" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-500 underline ml-1"
+          >
+            Dzivaresekwa 4, Harare
+          </a>
+        </p>
+      </div>
+
       {/* Flex container for map and form */}
       <div className="flex flex-col md:flex-row gap-8">
         {/* Location Map */}

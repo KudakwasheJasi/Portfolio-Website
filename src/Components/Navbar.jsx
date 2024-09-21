@@ -81,13 +81,13 @@ const Navbar = () => {
             {isHomeDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
                 <li>
-                  <Link to="/home1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Home 1</Link>
+                  <Link to="/home1" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Home 1</Link>
                 </li>
                 <li>
-                  <Link to="/home2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Home 2</Link>
+                  <Link to="/home2" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Home 2</Link>
                 </li>
                 <li>
-                  <Link to="/home3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Home 3</Link>
+                  <Link to="/home3" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Home 3</Link>
                 </li>
               </ul>
             )}
@@ -103,13 +103,13 @@ const Navbar = () => {
             {isAboutDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
                 <li>
-                  <Link to="/about1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>About 1</Link>
+                  <Link to="/about1" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>About 1</Link>
                 </li>
                 <li>
-                  <Link to="/about2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>About 2</Link>
+                  <Link to="/about2" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>About 2</Link>
                 </li>
                 <li>
-                  <Link to="/about3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>About 3</Link>
+                  <Link to="/about3" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>About 3</Link>
                 </li>
               </ul>
             )}
@@ -124,13 +124,13 @@ const Navbar = () => {
             {isServicesDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
                 <li>
-                  <Link to="/services1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Services 1</Link>
+                  <Link to="/services1" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Services 1</Link>
                 </li>
                 <li>
-                  <Link to="/services2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>services 2</Link>
+                  <Link to="/services2" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>services 2</Link>
                 </li>
                 <li>
-                  <Link to="/services3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>services 3</Link>
+                  <Link to="/services3" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>services 3</Link>
                 </li>
               </ul>
             )}
@@ -142,15 +142,15 @@ const Navbar = () => {
             </button>
             {/* Portfolio Dropdown Menu */}
             {isPortfolioDropdownOpen && (
-              <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
+              <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10 no-underline">
                 <li>
-                  <Link to="/portfolio1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 1</Link>
+                  <Link to="/portfolio1" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>portfolio 1</Link>
                 </li>
                 <li>
-                  <Link to="/portfolio2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 2</Link>
+                  <Link to="/portfolio2" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>portfolio 2</Link>
                 </li>
                 <li>
-                  <Link to="/portfolio3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 3</Link>
+                  <Link to="/portfolio3" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>portfolio 3</Link>
                 </li>
               </ul>
             )}
@@ -164,13 +164,13 @@ const Navbar = () => {
             {isBlogDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
                 <li>
-                  <Link to="/blog1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Blog 1</Link>
+                  <Link to="/blog1" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Blog 1</Link>
                 </li>
                 <li>
-                  <Link to="/blog2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Blog 2</Link>
+                  <Link to="/blog2" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>Blog 2</Link>
                 </li>
                 <li>
-                  <Link to="/blog3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>blog 3</Link>
+                  <Link to="/blog3" className="block px-4 py-2 text-white hover:bg-gray-600 no-underline" onClick={handleLinkClick}>blog 3</Link>
                 </li>
               </ul>
             )}

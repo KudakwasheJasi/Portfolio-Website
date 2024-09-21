@@ -25,6 +25,7 @@ import Blog1 from './Components/Blog1';
 import Services3 from './Components/Services3'
 import Portfolio2 from './Components/Portfolio2';
 import Portfolio3 from './Components/Portfolio3';
+import Blog2 from './Components/Blog2';
 
 const App = () => {
   return (
@@ -45,12 +46,14 @@ const App = () => {
         <Route path="/About2" element={<About2 />} />
         <Route path="/About3" element={<About3 />} />
         <Route path="/Services1" element={<Services1 />} />
-        <Route path="/Portfolio1" element={<Portfolio1 />} />
-        <Route path="/Blog1" element={<Blog1 />} />
         <Route path="/Services2" element={<Services2 />} />
         <Route path="/Services3" element={<Services3 />} />
+        <Route path="/Portfolio1" element={<Portfolio1 />} />
         <Route path="/Portfolio2" element={<Portfolio2 />} />
         <Route path="/Portfolio3" element={<Portfolio3 />} />
+        <Route path="/Blog1" element={<Blog1 />} />
+        <Route path="/Blog2" element={<Blog2 />} />
+
       </Routes>
     </Router>
   );
