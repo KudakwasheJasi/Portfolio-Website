@@ -18,15 +18,19 @@ const Contact = () => {
       'service_sr6iipy',
       'template_43bhmbq',
       {
-        name: values.name,
-        email: values.email,
-        message: values.message,
+        name: values.name,  // Sends the name
+        email: values.email,  // Sends the email
+        message: `You got a new message from: ${values.name}\n\nEmail: ${values.email}\n\nMessage: ${values.message}`, // Format message
       },
       'GArNQY_cFjXl8rT-a'
     )
     .then(() => {
       setFormStatus('Message sent successfully!');
       resetForm();
+      // Hide the success message after 3 seconds
+      setTimeout(() => {
+        setFormStatus('');
+      }, 3000);
     })
     .catch(() => {
       setFormStatus('Failed to send message. Please try again.');
@@ -73,7 +77,9 @@ const Contact = () => {
                   <Field name="message" as="textarea" rows="4" placeholder="Your Message" className="p-2 w-full border rounded"/>
                   <ErrorMessage name="message" component="div" className="text-red-600 text-sm mt-1"/>
                 </div>
-                <button type="submit" disabled={isSubmitting} className="bg-blue-500 text-white p-2 rounded">Send Message</button>
+                <button type="submit" disabled={isSubmitting} className="bg-blue-500 text-white p-2 rounded">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
               </Form>
             )}
           </Formik>
