@@ -18,6 +18,13 @@ import Home3 from './Components/Home3';
 import About1 from './Components/About1';
 import About2 from './Components/About2';
 import About3 from './Components/About3';
+import Services1 from './Components/Services1';
+import Services2 from './Components/Services2'
+import Portfolio1 from './Components/Portfolio1';
+import Blog1 from './Components/Blog1';
+import Services3 from './Components/Services3'
+import Portfolio2 from './Components/Portfolio2';
+import Portfolio3 from './Components/Portfolio3';
 
 const App = () => {
   return (
@@ -37,6 +44,13 @@ const App = () => {
         <Route path="/About1" element={<About1 />} />
         <Route path="/About2" element={<About2 />} />
         <Route path="/About3" element={<About3 />} />
+        <Route path="/Services1" element={<Services1 />} />
+        <Route path="/Portfolio1" element={<Portfolio1 />} />
+        <Route path="/Blog1" element={<Blog1 />} />
+        <Route path="/Services2" element={<Services2 />} />
+        <Route path="/Services3" element={<Services3 />} />
+        <Route path="/Portfolio2" element={<Portfolio2 />} />
+        <Route path="/Portfolio3" element={<Portfolio3 />} />
       </Routes>
     </Router>
   );

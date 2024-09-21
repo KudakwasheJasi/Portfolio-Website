@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false); // State for Home dropdown
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false); // State for About dropdown
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false); // State for Services dropdown
+  const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false); // State for Portfolio dropdown
+  const [isBlogDropdownOpen, setIsBlogDropdownOpen] = useState(false); // State for Blog dropdown
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,6 +22,8 @@ const Navbar = () => {
     setIsHomeDropdownOpen(false); // Close Home dropdown on link click
     setIsAboutDropdownOpen(false); // Close About dropdown on link click
     setIsServicesDropdownOpen(false); // Close About dropdown on link click
+    setIsPortfolioDropdownOpen(false); // Close Portfolio dropdown on link click
+    setIsBlogDropdownOpen(false); // Close Portfolio dropdown on link click
   };
 
   // Function to toggle Home dropdown
@@ -35,9 +39,17 @@ const Navbar = () => {
     const toggleServicesDropdown = () => {
       setIsServicesDropdownOpen(!isServicesDropdownOpen);
     };
+     // Function to toggle Portfolio dropdown
+     const togglePortfolioDropdown = () => {
+      setIsPortfolioDropdownOpen(!isPortfolioDropdownOpen);
+     };
+       // Function to toggle Portfolio dropdown
+       const toggleBlogDropdown = () => {
+        setIsBlogDropdownOpen(!isBlogDropdownOpen);
+     };
 
   return (
-    <nav className="navbar bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center">
+    <nav className="navbar bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center space-x-4">
       <div className="logo">
         <h1 className="text-2xl font-bold">
           <Link to="/" className="flex items-center">
@@ -63,7 +75,7 @@ const Navbar = () => {
           <div className="relative">
             <button onClick={toggleHomeDropdown} className="flex items-center text-white no-underline hover:text-blue-400">
               Home
-              <FaChevronDown className={`ml-1 transition-transform ${isHomeDropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+              {/* <FaChevronDown className={` transition-transform ${isHomeDropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> */}
             </button>
             {/* Home Dropdown Menu */}
             {isHomeDropdownOpen && (
@@ -85,7 +97,7 @@ const Navbar = () => {
           <div className="relative">
             <button onClick={toggleAboutDropdown} className="flex items-center text-white no-underline hover:text-blue-400">
               About 
-              <FaChevronDown className={`ml-1 transition-transform ${isAboutDropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+              {/* <FaChevronDown className={`ml-1 transition-transform ${isAboutDropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> */}
             </button>
             {/* About Dropdown Menu */}
             {isAboutDropdownOpen && (
@@ -106,7 +118,7 @@ const Navbar = () => {
         <div className="relative">
             <button onClick={toggleServicesDropdown} className="flex items-center text-white no-underline hover:text-blue-400">
               Services
-              <FaChevronDown className={`ml-1 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+              {/* <FaChevronDown className={`ml-1 transition-transform ${isServicesDropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> */}
             </button>
             {/* About Dropdown Menu */}
             {isServicesDropdownOpen && (
@@ -123,12 +135,46 @@ const Navbar = () => {
               </ul>
             )}
           </div>
-        <li>
-          <Link to="/portfolio" className="text-white no-underline hover:text-blue-400" onClick={handleLinkClick}>Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/blog" className="text-white no-underline hover:text-blue-400" onClick={handleLinkClick}>Blog</Link>
-        </li>
+          <div className="relative">
+            <button onClick={togglePortfolioDropdown} className="flex items-center text-white no-underline hover:text-blue-400">
+              Portfolio
+              {/* <FaChevronDown className={`ml-1 transition-transform ${isPortfolioDropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> */}
+            </button>
+            {/* Portfolio Dropdown Menu */}
+            {isPortfolioDropdownOpen && (
+              <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
+                <li>
+                  <Link to="/portfolio1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 1</Link>
+                </li>
+                <li>
+                  <Link to="/portfolio2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 2</Link>
+                </li>
+                <li>
+                  <Link to="/portfolio3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>portfolio 3</Link>
+                </li>
+              </ul>
+            )}
+          </div>
+          <div className="relative">
+            <button onClick={toggleBlogDropdown} className="flex items-center text-white no-underline hover:text-blue-400">
+              Blog
+              {/* <FaChevronDown className={`ml-1 transition-transform ${isBlogDropdownOpen ? 'rotate-180' : 'rotate-0'}`} /> */}
+            </button>
+            {/* Blog Dropdown Menu */}
+            {isBlogDropdownOpen && (
+              <ul className="absolute left-0 mt-2 w-48 bg-gray-700 rounded-md shadow-lg z-10">
+                <li>
+                  <Link to="/blog1" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Blog 1</Link>
+                </li>
+                <li>
+                  <Link to="/blog2" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>Blog 2</Link>
+                </li>
+                <li>
+                  <Link to="/blog3" className="block px-4 py-2 text-white hover:bg-gray-600" onClick={handleLinkClick}>blog 3</Link>
+                </li>
+              </ul>
+            )}
+          </div>
         <li>
           <Link to="/contact" className="text-white no-underline hover:text-blue-400" onClick={handleLinkClick}>Contact</Link>
         </li>
