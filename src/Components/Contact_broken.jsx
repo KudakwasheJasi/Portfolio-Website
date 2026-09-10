@@ -277,3 +277,28 @@ const Contact = () => {
 };
 
 export default Contact;
+
+          {formStatus && <p className="text-center mt-4">{formStatus}</p>}
+        </div>
+      </div>
+
+      {/* Contact Links */}
+      <div className="contact-links text-center mt-8">
+        <p>
+          WhatsApp me: 
+          <a href="https://wa.me/263714141360" className="text-blue-500 underline ml-1">+263714141360</a>
+        </p>
+        <p>
+          Call me: 
+          <a href="tel:+263714141360" className="text-blue-500 underline ml-1">+263714141360</a>
+        </p>
+        <p>
+          Facebook: 
+          <a href="https://www.facebook.com/your-facebook-profile" className="text-blue-500 underline ml-1">Visit my Facebook</a>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

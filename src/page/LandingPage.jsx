@@ -3,20 +3,19 @@ import About from '../Components/About';
 import Blog from '../Components/Blog';
 import Portfolio from '../Components/Portfolio';
 import Services from '../Components/Services';
-import Home from '../Components/Home'; // Include Navbar if needed
+import Home from '../Components/Home';
 import Contact from '../Components/Contact';
 
 const LandingPage = () => {
   return (
-    <>
- {/* Add Navbar if you want it at the top of the page */}
+    <div className="w-full">
       <Home />
       <About />
       <Services />
       <Portfolio />
       <Blog />
-      <Contact/>
-    </>
+      <Contact />
+    </div>
   );
 };
 

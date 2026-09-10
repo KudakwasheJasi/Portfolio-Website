@@ -2,48 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   padding: 0;
   margin: 0;
-  font-family: "Poppins" sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  background-color: #111827;
+  color: #ffffff;
+  overflow-x: hidden;
+}
 
-/* Add this CSS to your stylesheet */
-
+/* Animations */
 @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .welcome-image {
-    animation: rotate 10s linear infinite;
+  100% {
+    transform: rotate(360deg);
   }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .justify-end {
-    justify-content: flex-end;
-  }
+}
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-  
+.welcome-image {
+  animation: rotate 10s linear infinite;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Responsive Typography */
+@screen sm {
+  body {
+    font-size: 14px;
+  }
+}
+
+@screen md {
+  body {
+    font-size: 16px;
+  }
+}
+
+@screen lg {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.container-custom {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300;
+}
+
+.section-title {
+  @apply text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Mobile Menu */
+.mobile-menu-active {
+  @apply fixed top-16 left-0 right-0 bg-gray-800 shadow-lg;
+}
+
+/* Responsive Padding */
+@screen sm {
+  .p-responsive {
+    @apply p-4;
+  }
+}
+
+@screen md {
+  .p-responsive {
+    @apply p-8;
+  }
+}
+
+@screen lg {
+  .p-responsive {
+    @apply p-12;
+  }
+}
+
+/* Focus Styles for Accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply ring-2 ring-blue-400 ring-offset-2 ring-offset-gray-900;
+}
